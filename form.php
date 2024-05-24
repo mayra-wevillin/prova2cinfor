@@ -11,27 +11,7 @@
 <body>
   <div class="container">
     <div class="coluna">
-        <?php 
-
-        include "conexao.php";
-        $nome = $_POST['nome']; 
-        $endereco = $_POST['endereco'];
-        $telefone = $_POST['telefone'];
-        $data = $_POST['data'];
-        $email = $_POST['email'];
-        $senha = md5($_POST['senha']);
-        
-        $sql = "INSERT INTO usuario(nome,endereco,telefone,data,email,senha)
-        VALUES('$nome','$endereco','$telefone','$data','$email','$senha')";
-        if($sql = mysqli_query($conexao,$sql)){
-
-            mensagem("$nome cadastrado com sucesso!",'success');
-        }
-        else{
-            mensagem("erro ao cadastrar usuario",'danger');
-        }
-        
-        ?>
+      
         <hr>
         <a href="index.php" class="btn btn-primary">voltar</a>
 

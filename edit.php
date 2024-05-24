@@ -12,31 +12,6 @@
   <div class="container">
     <div class="coluna">
       
-        <?php 
-
-        include "conexao.php";
-        $id = $_POST['id'];
-        $nome = $_POST['nome']; 
-        $endereco = $_POST['endereco'];
-        $telefone = $_POST['telefone'];
-        $data = $_POST['data'];
-        $email = $_POST['email'];
-        $senha = md5($_POST['senha']);
-
-      
-        $sql = "UPDATE usuario set nome = '$nome', endereco = '$endereco',  telefone = '$telefone', data = '$data',
-        email = '$email', senha = '$senha' WHERE id = $id";
-        
-        
-        if($sql = mysqli_query($conexao,$sql)){
-
-            mensagem("$nome Alterado com sucesso!",'success');
-        }
-        else{
-            mensagem("erro ao alterar usuario",'danger');
-        }
-        
-        ?>
         <hr>
           <a href="index.php" class="btn btn-primary">voltar</a>
 
