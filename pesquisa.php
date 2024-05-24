@@ -9,7 +9,10 @@
 </head>
 
 <body>
-   
+    <?php 
+    
+    ?>
+    
     <div class="container">
         <div class="row">
             <div class="col">
@@ -24,27 +27,19 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                              <th scope="col">Nome</th>
-                              <th scope="col">Endereço</th>
-                              <th scope="col">Telefone</th>
-                              <th scope="col">Data Nascimento</th>
-                              <th scope="col">Email</th>
-                              <th scope="col">Ações</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php 
-                          
+                           
 
                                 echo "<tr>
                                 
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                
+                                <td>$nome</td>
+                                <td>$email</td>
                                 <td width=150px>
                                <a href='editar.php? id=$id' class='btn btn-success btn-sm'>Editar</a>
                                <a href='#' class='btn btn-danger btn-sm'>Excluir</a>

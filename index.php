@@ -14,7 +14,7 @@
       <div class="linha">
      
         <div class="jumbotron">
-          <h1 class="display-4">Sistema de Cadastro de Pessoas</h1>
+          <h1 class="display-4">Prova Prática informática 2C</h1>
           <p class="lead">Sistema desenvolvido por alunos do curso tecnico em informática e desenvolvimento de sistemas da EEEP Paulo Barbosa Leite</p>
           <hr class="my-4">
           <p>Acesso a Funções do Sistema</p>
