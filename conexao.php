@@ -1,5 +1,16 @@
 <?php 
+$servidor="localhost";
+$usuario="root";
+$senha="";
+$banco="prova";
+ 
+if($conexao=mysqli_connect($servidor,$usuario,$senha,$banco)){
+    //echo "conexao realizada com sucesso";
 
+} 
+else{
+    echo"erro";
+}
 
 function mensagem($texto,$tipo){
     echo"<div class='alert alert-$tipo' role='alert'>
@@ -12,6 +23,4 @@ function mostrar_data($data){
     return $escreve;
 
 }
-
-
 ?>

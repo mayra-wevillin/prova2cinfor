@@ -9,6 +9,27 @@
 </head>
 
 <body>
+<?php
+include ("conexao.php");
+$id = $_POST['id'];
+$nome = $_POST['nome'];
+$endereço = $_POST['endereço'];
+$telefone= $_POST['telefone'];
+$email = $_POST['email'];
+$data = $_POST['data'];
+$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+
+$consulta = "UPDATE usuario set nome = '$nome', endereço = '$endereço', telefone = '$telefone' , data = '$data',  email = '$email', senha = '$senha'
+WHERE id = $id";
+
+
+if ($conexao = mysqli_query($conexao, $consulta)) {
+    echo "Alterado com sucesso";
+} else {
+    echo "Erro ao fazer a alteração" . mysqli_connect_error($conexao);
+}
+?>
   <div class="container">
     <div class="coluna">
       

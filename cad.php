@@ -7,7 +7,24 @@
   <title>cadastrado</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<?php
+include("conexao.php");
+$nome=$_POST['nome'];
+$endereco=$_POST['endereco'];
+$telefone=$_POST['telefone'];
+$data=$_POST['data'];
+$email=$_POST['email'];
+$senha=md5($_POST['senha']);
 
+$consulta= "INSERT INTO usuario (nome,endereço,telefone,data,email,senha)
+VALUES ('$nome','$endereco','$telefone','$data','$email','$senha')";
+if($conexao=mysqli_query($conexao,$consulta)){
+  mensagem("$nome cadastro realizado com sucesso!",'success');
+}
+else{
+  mensagem("erro ao cadastrar usuario",'danger');
+}
+?>
 <body>
   <div class="container">
     <div class="coluna">
